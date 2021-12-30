@@ -3,10 +3,17 @@
   padding-bottom: 64px;
 }
 
+.characterWrapper {
+  position: fixed;
+  top: 20%;
+  left: 55%;
+  right: 0;
+  bottom: 5%;
+  min-height: 500px;
+}
+
 .maxWidthWrapper {
   position: relative;
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 .header {
@@ -27,14 +34,6 @@
   margin: 0;
 }
 
-.characterWrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 500px;
-}
-
 .controlColumn {
   max-width: 50%;
   overflow: auto;
@@ -42,9 +41,6 @@
 
 
 @media (max-width: 1023px) {
-  html, body {
-    height: 100%;
-  }
   .maxWidthWrapper {
     margin-top: 350px;
     overflow: hidden;
@@ -55,6 +51,11 @@
     width: 0;
     height: 0;
     opacity: 0;
+  }
+
+  .characterWrapper {
+    top: 5%;
+    left: 0;
   }
 
   .controlColumn {
@@ -68,7 +69,6 @@
     overflow: auto;
     margin-right: 20px;
   }
-
 }
 @media (min-width: 1024px) {
   .characterEditor:before {
@@ -79,19 +79,5 @@
     left: 0;
     right: 0;
     background-color: hsl(195deg, 20%, 86%);
-  }
-
-  .characterWrapper {
-    position: fixed;
-    left: 55%;
-    right: 0;
-    min-height: 500px;
-  }
-
-  .header {
-    max-width: 65%;
-  }
-  .controlColumn {
-    max-width: 50%;
   }
 }
